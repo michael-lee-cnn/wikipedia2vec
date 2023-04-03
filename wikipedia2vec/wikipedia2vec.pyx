@@ -362,9 +362,7 @@ cdef class Wikipedia2Vec:
             logger.info('Terminating pool workers...')
 
         self.syn0 = self.syn0.copy()
-        syn0_mmap.close()
         self.syn1 = self.syn1.copy()
-        syn1_mmap.close()
 
         train_params = dict(
             dump_db=dump_db.uuid,
